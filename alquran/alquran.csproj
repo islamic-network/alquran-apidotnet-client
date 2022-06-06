@@ -4,6 +4,14 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Authors>salehmu</Authors>
+        <Company>Alquran Cloud</Company>
+        <Description>.NET wrapper Quran library for alquran.cloud v1 APIs, written in C#</Description>
+        <PackageProjectUrl>https://github.com/salehmu/alquran</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/salehmu/alquran</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>quran,islam,api,quran.cloud</PackageTags>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>

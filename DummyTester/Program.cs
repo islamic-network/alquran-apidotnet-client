@@ -37,7 +37,6 @@ public static class F
         var e2 = AlQuranV1.Surah(114, "ar.alafasy") as Surah;
         var e3 = AlQuranV1.Surah(3, offset: 4, limit: 7) as Surah;
         var e4 = AlQuranV1.Surah(114, "quran-uthmani,en.asad,en.pickthall") as IEnumerable<Surah>;
-        //todo use getgenaric 
     }
 
     static void TestAyah()
@@ -82,16 +81,21 @@ public static class F
 
     public static void Main()
     {
-        TestQuran();
-        TestSurah();
-        TestAyah();
-        TestSearch();
-        TestManzil();
-        TestJuz();
-        TestRuku();
-        TestPage();
-        TestHizb();
-        TestSajda();
+        // TestQuran();
+        // TestSurah();
+        // TestAyah();
+        // TestSearch();
+        // TestManzil();
+        // TestJuz();
+        // TestRuku();
+        // TestPage();
+        // TestHizb();
+        // TestSajda();
+
+        // var e = AlQuranV1.Editions("audio", "fr", "versebyverse");
+
+
+        var r = AlQuranV1.Surah(13) as Surah;
         Console.WriteLine();
     }
     // TODO unit testing 
