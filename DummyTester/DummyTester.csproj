@@ -7,4 +7,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="RestSharp" Version="107.3.0" />
+      <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="107.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\alquran\alquran.csproj" />
+    </ItemGroup>
+
 </Project>
