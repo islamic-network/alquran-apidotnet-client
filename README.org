@@ -1,4 +1,5 @@
 #+title: بِسْمِ اللهِ الرَّحْم?نِ الرَّحِيْمِ
+
 * Alquran
 .NET lightweight Quran library using the alquran.cloud v1 APIs.
 - Dependencies:
@@ -23,9 +24,9 @@ IEnumerable<Edition>? Editions(string format, string lang, string type)
 #+end_src
 
 *** Parameters
-+ *\~format~\*: specify a format. 'text' or 'audio.
-+ *\~lang~\*:  a 2 digit language code. Example: 'en', 'fr', etc.
-+ *\~type~\*: a valid type. Example - 'versebyverse', 'translation' etc.
++ ~format~: specify a format. 'text' or 'audio.
++ ~lang~:  a 2 digit language code. Example: 'en', 'fr', etc.
++ ~type~: a valid type. Example - 'versebyverse', 'translation' etc.
 *** Cases
 Lists all editions for a given language:
 #+begin_src csharp
@@ -55,7 +56,7 @@ Returns a complete Quran edition in the audio or text format
 Quran? Quran(string edition)
 #+end_src
 *** Parameters
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation
 *** Cases
 #+begin_src csharp
 Quran? Quran()
@@ -83,10 +84,10 @@ The Quran has 30 Juz. You can get the text for each Juz using the method below.
 Juz? Juz(int juz, string edition, int offset, int limit)
 #+end_src
 *** Parameters
-+ *\~juz~\*: number of juz.
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
-+ *\~offset~\*:  offset ayahs in a juz by the given number.
-+ *\~limit~\*: number of ayahs that the response will be limited to.
++ ~juz~: number of juz.
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
++ ~offset~:  offset ayahs in a juz by the given number.
++ ~limit~: number of ayahs that the response will be limited to.
 
 *** Cases
 #+begin_src csharp
@@ -97,7 +98,7 @@ Returns an object of ~juz~ from edition ~edition~ of the Holy Quran
 Juz? Juz(int juz, string edition, int offset, int limit)
 #+end_src
 *** Required Parameters
-+ *\~juz~\*: number of juz
++ ~juz~: number of juz
 *** Example
 #+begin_src csharp
 var e1 = AlQuranV1.Juz(30, "en.asad");
@@ -113,10 +114,10 @@ Holy Quran.
 object? Surah(int surah, string edition, int offset, int limit)
 #+end_src
 *** Parameters
-+ *\~surah~\*: number of surah
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
-+ *\~offset~\*:  offset ayahs in a juz by the given number.
-+ *\~limit~\*: number of ayahs that the response will be limited to.
++ ~surah~: number of surah
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
++ ~offset~:  offset ayahs in a juz by the given number.
++ ~limit~: number of ayahs that the response will be limited to.
 
 *** Cases
 #+begin_src csharp
@@ -169,11 +170,11 @@ object? Ayah(int ayah, string edition = "")
 object? Ayah(int surah, int ayah, string edition = "")
 #+end_src
 *** Parameters
-+ *\~ayah~\*: number of ayah
-+ *\~surah~\*: number of surah
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
-+ *\~offset~\*:  offset ayahs in a juz by the given number.
-+ *\~limit~\*: number of ayahs that the response will be limited to.
++ ~ayah~: number of ayah
++ ~surah~: number of surah
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
++ ~offset~:  offset ayahs in a juz by the given number.
++ ~limit~: number of ayahs that the response will be limited to.
 
 *** Cases
 #+begin_src csharp
@@ -195,8 +196,8 @@ object? Ayah(int surah, int ayah, string edition = "")
 
 Returns an object (castable to ~IEnumerable<Surah>~ object) of all Surahs of the holy Quran
 *** Required Parameters
-+ *\~ayah~\*: number of ayah
-+ *\~surah~\*: number of surah
++ ~ayah~: number of ayah
++ ~surah~: number of surah
 *** Example
 #+begin_src csharp
 var e1 = AlQuranV1.Ayah(262) as Ayah; // Returns Muhammad Asad's translation Ayat Al Kursi
@@ -216,9 +217,9 @@ Search the Holy Quran. Please note that only text editions of the Quran are sear
 SearchResult? Search(string keyword, string editionOrLanguage, int surah)
 #+end_src
 *** Parameters
-+ *\~keyword~\*: the keyword to seach for
-+ *\~surah~\*: number of surah
-+ *\~editionOrLanguage~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation. or an language identifier. Example: en for english, ar for Arabic
++ ~keyword~ the keyword to seach for
++ ~surah~ number of surah
++ ~editionOrLanguage~ an edition identifier. Example: en.asad for Muhammad Asad's english translation. or an language identifier. Example: en for english, ar for Arabic
 
 *** Cases
 #+begin_src csharp
@@ -234,8 +235,8 @@ Returns and object of ~SearchResult~ with results of searching in edition[or, ed
 the language] ~editionOrLanguage~
 
 *** Required Parameters
-+ *\~keyword~\*: the keyword to seach for
-+ *\~editionOrLanguage~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation. or an language identifier. Example: en for english, ar for Arabic
++ ~keyword~: the keyword to seach for
++ ~editionOrLanguage~: an edition identifier. Example: en.asad for Muhammad Asad's english translation. or an language identifier. Example: en for english, ar for Arabic
 
 *** Example
 #+begin_src csharp
@@ -254,10 +255,10 @@ the text for each Manzil using this method.
 Manzil? Manzil(int manzil, string edition, int offset = -99, int limit = -99)
 #+end_src
 *** Parameters
-+ *\~manzil~\*: number of manzil.
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
-+ *\~offset~\*:  offset ayahs in a juz by the given number.
-+ *\~limit~\*: number of ayahs that the response will be limited to.
++ ~manzil~: number of manzil.
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
++ ~offset~:  offset ayahs in a juz by the given number.
++ ~limit~: number of ayahs that the response will be limited to.
 *** Cases
 #+begin_src csharp
 Manzil? Manzil(int manzil, string edition)
@@ -267,7 +268,7 @@ Returns an object of ~manzil~ from edition ~edition~ of the Holy Quran
 Manzil? Manzil(int manzil, string edition, int offset, int limit)
 #+end_src
 *** Required Parameters
-+ *\~manzil~\*: number of manzil
++ ~manzil~: number of manzil
 *** Example
 #+begin_src csharp
 var e1 = AlQuranV1.Manzil(7, "en.asad "); // Returns manzil 7 from Muhammad Asad's translation of the Holy Quran
@@ -282,10 +283,10 @@ The Quran has 556 Rukus. You can get the text for each Ruku using the method bel
 Ruku? Ruku(int ruku, string edition, int offset = -99, int limit = -99)
 #+end_src
 *** Parameters
-+ *\~ruku~\*: number of ruku.
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
-+ *\~offset~\*:  offset ayahs in a juz by the given number.
-+ *\~limit~\*: number of ayahs that the response will be limited to.
++ ~ruku~: number of ruku.
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
++ ~offset~:  offset ayahs in a juz by the given number.
++ ~limit~: number of ayahs that the response will be limited to.
 *** Cases
 #+begin_src csharp
 Ruku? Ruku(int ruku, string edition)
@@ -295,7 +296,7 @@ Returns an object of ~Ruku~ from edition ~edition~ of the Holy Quran
 Ruku? Ruku(int manzil, string edition, int offset, int limit)
 #+end_src
 *** Required Parameters
-+ *\~ruku~\*: number of manzil
++ ~ruku~: number of manzil
 *** Example
 #+begin_src csharp
 var e1 = AlQuranV1.Ruku(7, "en.asad"); // Returns ruku 7 from Muhammad Asad's translation of the Holy Quran
@@ -313,10 +314,10 @@ page using the method below.
 Page? Page(int page, string edition, int offset = -99, int limit = -99)
 #+end_src
 *** Parameters
-+ *\~page~\*: number of page.
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
-+ *\~offset~\*:  offset ayahs in a juz by the given number.
-+ *\~limit~\*: number of ayahs that the response will be limited to.
++ ~page~: number of page.
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
++ ~offset~:  offset ayahs in a juz by the given number.
++ ~limit~: number of ayahs that the response will be limited to.
 *** Cases
 #+begin_src csharp
 Page? Page(int page, string edition)
@@ -327,7 +328,7 @@ Page? Page(int page, string edition, int offset, int limit)
 #+end_src
 
 *** Required Parameters
-+ *\~page~\*: number of page
++ ~page~: number of page
 *** Example
 #+begin_src csharp
 var e1 = AlQuranV1.Page(1, "en.asad "); // Returns page 1 from Muhammad Asad's translation of the Holy Quran
@@ -346,10 +347,10 @@ The Quran comprises 240 Hizb Quarters. One Hizb is half a Juz.
 Hizb? Hizb(int hizb, string edition, int offset = -99, int limit = -99)
 #+end_src
 *** Parameters
-+ *\~hizb~\*: number of hizb.
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
-+ *\~offset~\*:  offset ayahs in a juz by the given number.
-+ *\~limit~\*: number of ayahs that the response will be limited to.
++ ~hizb~: number of hizb.
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
++ ~offset~:  offset ayahs in a juz by the given number.
++ ~limit~: number of ayahs that the response will be limited to.
 *** Cases
 #+begin_src csharp
 Hizb? Hizb(int hizb, string edition)
@@ -360,7 +361,7 @@ Hizb? Ruku(int hizv, string edition, int offset, int limit)
 #+end_src
 
 *** Required Parameters
-+ *\~hizb~\*: number of hizb
++ ~hizb~: number of hizb
 *** Example
 #+begin_src csharp
 var e1 = AlQuranV1.Hizb(7, "en.asad "); // Returns hizb quarter 1 from Muhammad Asad's translation of the Holy Quran
@@ -376,7 +377,7 @@ Depending on the madhab, there can be 14, 15 or 16 sajdas. This API has 15.
 (IEnumerable<Ayah>, Edition) Sajda(string edition)
 #+end_src
 *** Parameters
-+ *\~edition~\*: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
++ ~edition~: an edition identifier. Example: en.asad for Muhammad Asad's english translation.
 *** Cases
 #+begin_src csharp
 (IEnumerable<Ayah>, Edition) Sajda(string edition)
