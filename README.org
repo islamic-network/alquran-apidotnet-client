@@ -1,3 +1,4 @@
+* بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
 * Contents :TOC_3:
   - [[#alquran][Alquran]]
   - [[#demo][Demo]]
