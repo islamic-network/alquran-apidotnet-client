@@ -1,5 +1,6 @@
 * بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
 * Contents :TOC_3:
+- [[#بِسْمِ-اللَّـهِ-الرَّحْمَـٰنِ-الرَّحِيمِ][بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ]]
   - [[#alquran][Alquran]]
   - [[#demo][Demo]]
   - [[#usage][Usage]]
@@ -15,6 +16,7 @@
     - [[#hizb][~Hizb~]]
     - [[#sajda][~Sajda~]]
   - [[#improve-documentation][Improve Documentation]]
+  - [[#refactor-classes-to-be-non-static-to-facilitate-net-management][Refactor Classes to Be non-static, to facilitate .NET management]]
   - [[#add-unit-testing-class][Add Unit Testing Class]]
   - [[#note-about-meta][Note About ~Meta~]]
 
@@ -415,6 +417,7 @@ var e1 = AlQuranV1.Sajda("en.asad "); // Returns the text of sajda ayahs of the 
 An object of type ~(IEnumerable<Ayah>, Edition)~
 
 ** TODO Improve Documentation
+** TODO Refactor Classes to Be non-static, to facilitate .NET management
 ** TODO Add Unit Testing Class
 ** Note About ~Meta~
 I did not implement an interface for the meta API (~http://api.alquran.cloud/v1/meta~), and
